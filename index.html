@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6c532cc0c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <img src="img/Supritha.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>I'm <span>Supritha V</span> <br>from India</h1>
+        </div>
+    </div>
+    </div>
+    <div id="background-image"></div>
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                  <img src="img/web.png">
+                </div>
+                <div class="about-col-2"></div>
+                <h1 class="sub-title">About Me</h1>
+                <p></p>
+                <div class="tab-titles"></div>
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web Development</span><br>Web app Development</li>
+                    <li><span>AR & VR</span><br>Augmented Reality and Virtual Reality</li>
+                    <li><span>App Development</span><br>Building Android apps</li>
+
+
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Feb 2024-current</span><br>Internship at Nova Tech</li>
+                    <li><span>June 2023-July 2023</span><br>Internship at NSIC Ekkaduthangal</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2021-current</span><br>BE CSE at SVCE Chennai</li>
+                    <li><span>2020-2021</span><br>class 12 with 96%</li>
+                    <li><span>2018-2019</span><br>class 10 with 95%</li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="Projects">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>Heart Disease Predictor</h2>
+                    <p>Cardio Guide is an application which uses Machine Learning Model to predict the chances of Heart Disease with an accuracy of 81.967%. With this it also provide you with tips to improve your health status which directly benefits your heart.
+                        Heart diseases is a term covering any disorder of the heart. Heart diseases have become a major concern to deal with as studies show that the number of deaths due to heart diseases have increased significantly over the past few decades in India, in fact it has become the leading cause of death in India. Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease, heart rhythm problems (arrhythmias) and heart defects you’re born with (congenital heart defects), among others.
+                         Thus preventing Heart diseases has become more than necessary. Good data-driven systems for predicting heart diseases can improve the entire research and prevention process, making sure that more people can live healthy lives. This is where Machine Learning comes into play. Machine Learning helps in predicting the Heart diseases, and the predictions made are quite accurate.
+                        </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-droplet"></i>
+                    <h2>Water Footprint Analysis</h2>
+                    <p>This Website calculates the amount of water needed to produce a product or do a particular activity .The activity or product which consumes less amount of water can be used in day to day life.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-right-left"></i>
+                    <h2>Skill Swap place</h2>
+                    <p>Skill Swap Place is a platform where people can exchange their skills and knowledge with others in a mutually beneficial way. It's like a virtual marketplace where individuals can offer what they're good at in exchange for assistance in something they want to learn or improve.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>suprithamlm12a4@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>4533522984</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/supritha-v-9b8010231/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="img/Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+        <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Developed by Supritha</p>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-content");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx3etZYclV3OT2Jcc2IO_qokjWTxA0ITOE0rGpSY6YPWZvRDrY_jW-0wAZhlXlJW60o/exec'
+        const form = document.forms['submit-to-google-sheet']
+      const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+</body>    
+</html>
